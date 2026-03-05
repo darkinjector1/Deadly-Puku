@@ -177,6 +177,16 @@ setInterval(draw,33);
   <audio autoplay loop>
   <source src="hacker.mp3.mp4" type="audio/mpeg">
 </audio>
+<audio id="clickSound">
+  <source src="click.mp3.webm" type="audio/webm">
+</audio>
 
+<script>
+document.querySelectorAll("a").forEach(function(btn){
+  btn.addEventListener("click", function(){
+    document.getElementById("clickSound").play();
+  });
+});
+</script>
 </body>
 </html>
